@@ -1,12 +1,12 @@
 " =================================================== "
-" シンタックス設定
+" Syntax Configuration 
 " =================================================== "
 syntax on
 colorscheme molokai
 
 
 " =================================================== "
-" 文字コード設定
+" Encoding Configuration 
 " =================================================== "
 set encoding=utf-8
 set fileencodings=iso-2022-jp,enc-jp,sjis,utf-8
@@ -14,45 +14,67 @@ set fileformats=unix,dos,mac
 
 
 " =================================================== "
-" 検索挙動設定
+" Search Configuration
 " =================================================== "
-set noignorecase "大文字小文字を区別する
-set smartcase "大文字小文字の両方が含まれている場合は区別する
-set nowrapscan "ファイル末尾まで達したときにファイル先頭に戻らない
+set noignorecase 
+set smartcase 
+set nowrapscan 
 
 
 " =================================================== "
-" 編集設定 
+" Edit Configuration 
 " =================================================== "
-set tabstop=8 "タブの画面上での幅
-set noexpandtab "タブをスペースに展開しない
-set autoindent "自動的にインデントする
-set backspace=indent,eol,start "バックスペースでインデントや改行を削除できるようにする
-set showmatch "対括弧を表示する
-set wildmenu "強化されたコマンドライン補完を使う
-set cursorline "カーソル行の背景色を変える
-set cursorcolumn "カーソル位置のカラムの背景色を変える
+set tabstop=8 "
+set noexpandtab 
+set autoindent 
+set backspace=indent,eol,start 
+set showmatch 
+set wildmenu 
+set cursorline 
+set cursorcolumn
 
 
 " =================================================== "
-" 画面表示設定
+" Display Configuration
 " =================================================== "
-set number "行番号を表示
-set ruler "ルーラーを表示
-set nolist "タブや改行を表示しない
-set nowrap "折り返し表示しない
-set laststatus=2 "常にステータス行を表示
-set cmdheight=2 "コマンドラインの高さ
-set showcmd "コマンドをステータス行に表示
-set title "タイトルを表示
+set number
+set ruler 
+set nolist 
+set nowrap 
+set laststatus=2 
+set cmdheight=2 
+set showcmd 
+set title 
 
 
 " =================================================== "
-" ファイル設定
+" File Configuration
 " =================================================== "
-set confirm "保存されていないファイルがあるときは終了前に保存確認をする
-set hidden "保存されていないファイルがあるときでも別のファイルを開くことができる
-set autoread "外部でファイルが変更された場合は読み直す
-set nobackup "Backupファイルを作成しない
-set noswapfile "Swapファイルを作成しない
-set noundofile "Undoファイルを作成しない
+set confirm 
+set hidden 
+set autoread 
+set nobackup 
+set noswapfile
+set noundofile 
+
+
+
+" =================================================== "
+" Keymap Configuration
+" =================================================== "
+let mapleader = ","
+noremap \ ,
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
+nmap <Leader><Leader> V
+noremap <Space>h ^
+noremap <Space>l $
+nnoremap ZZ <Nop>
+nnorema ZQ <Nop>
+inoremap jk <ESC>
