@@ -62,8 +62,7 @@ set noundofile
 " =================================================== "
 " Keymap Configuration
 " =================================================== "
-let mapleader = ","
-noremap \ ,
+let mapleader = "\<Space>"
 
 nnoremap ; :
 nnoremap : ;
@@ -73,8 +72,8 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 nmap <Leader><Leader> V
-noremap <Space>h ^
-noremap <Space>l $
+noremap <Leader>h ^
+noremap <Leader>l $
 nnoremap ZZ <Nop>
-nnorema ZQ <Nop>
+nnoremap ZQ <Nop>
 inoremap jk <ESC>
